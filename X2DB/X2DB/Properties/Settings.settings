@@ -1,6 +1,9 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="X2DB.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="InputSource" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://apteanonline-my.sharepoint.com/personal/skhandelwal_aptean_com/Documents/sk_data/POW.xlsx</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

@@ -1,6 +1,5 @@
 ﻿using NLog;
 using System;
-using X2DB.Logic;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,12 +21,23 @@ namespace X2DB
             catch { }
 
             logger.Info(Environment.NewLine + "--- Starting X2DB v.{0} ---{1}", currVersion, Environment.NewLine);
+
+            try
+            {
+                GeneralSettings.inputSource = Properties.Settings.Default.InputSource;
+                if(String.IsNullOrEmpty(GeneralSettings.inputSource))
+                {
+                    throw new Exception("Ex: Input not available.");
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Warn(e.Message);
+                Stop();
+            }
+
+            Logic.Initialize();
             
-            // Thread Spawning Mechanism
-            //for(int i = 0; i < 5; i++)
-            //{
-            //    Logic.Logic.Initialize();
-            //}
         }
         public void Stop()
         {

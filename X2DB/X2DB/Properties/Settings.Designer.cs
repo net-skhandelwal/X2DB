@@ -22,5 +22,18 @@ namespace X2DB.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://apteanonline-my.sharepoint.com/personal/skhandelwal_aptean_com/Documents/" +
+            "sk_data/POW.xlsx")]
+        public string InputSource {
+            get {
+                return ((string)(this["InputSource"]));
+            }
+            set {
+                this["InputSource"] = value;
+            }
+        }
     }
 }
